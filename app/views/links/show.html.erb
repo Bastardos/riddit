@@ -1,0 +1,20 @@
+<div id="link" class="show">
+  <div class="link">
+    <%= @link.link %>
+  </div>
+
+  <div id="comments">
+    <% @link.comments.each do |comment| %>
+      <div class="comment">
+        <div class="author">
+          <%= comment.user.username %>
+        </div>
+
+        <div class="comment">
+          <%= comment.comment %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
