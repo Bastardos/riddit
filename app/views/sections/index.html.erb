@@ -1,0 +1,22 @@
+<div id="section">
+  <div class="name">
+    <h1><%= @section.name %></h1>
+  </div>
+
+  <div id="links">
+    <% @section.links.each do |link| %>
+      <div class="link">
+        <div class="link">
+          <h2><%= link_to(link.link, link.link) %></h2>
+        </div>
+
+        <div class="meta">
+          <div class="comments">
+            <%= link_to("Comments", @section) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
